@@ -1,4 +1,5 @@
 'use client';
+import ShareButtons from './ShareButtons';
 import { useState, useRef, useCallback } from 'react';
 
 const SUPABASE_URL = "https://ofplelhbmbueetvqxppt.supabase.co";
@@ -115,6 +116,11 @@ export default function BeautyPortal() {
   };
 
   const shareResult = () => {
+    if(!diagResult) return;
+    const txt = encodeURIComponent(`パーソナルカラー診断結果：${diagResult.type}でした！\n似合う韓国コスメをチェック👇\n#パーソナルカラー診断 #韓国コスメ #KBeauty`);
+    window.open(`https://twitter.com/intent/tweet?text=${txt}&url=${encodeURIComponent('https://beauty-portal-jp.vercel.app')}`,'_blank');
+  };
+  const _shareResult_orig = () => {
     if(!diagResult) return;
     const txt = encodeURIComponent(`パーソナルカラー診断結果：${diagResult.type}でした！\n似合うコスメをチェック👇\n#パーソナルカラー診断 #韓国コスメ #KBeauty`);
     window.open(`https://twitter.com/intent/tweet?text=${txt}&url=${encodeURIComponent('https://beauty-portal-jp.vercel.app')}`,'_blank');
