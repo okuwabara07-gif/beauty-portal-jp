@@ -1,6 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@400;500&display=swap');
 * { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --pink: #F2A7C3; --deep: #1a0a12; --cream: #FDF6F0; --gold: #C9924A;
-  --bg: #FDF6F0; --surface: #fff; --border: #EDD8CC; --text: #1a0a12; --muted: #8a6a72;
-}
-body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); }
+body { background: #FAFAF8; }
+button { font-family: inherit; }
+select, input, textarea { font-family: inherit; }
