@@ -1,2 +1,3 @@
 # beauty-portal-jp
-K-Beauty Portal - ランキング・口コミ・AIパーソナルカラー診断
+
+Updated: 2026-03-31
