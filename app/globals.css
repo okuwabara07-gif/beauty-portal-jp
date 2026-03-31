@@ -1,2 +1,26 @@
-*{box-sizing:border-box;margin:0;padding:0;}
-body{background:#FAFAF8;color:#2C2420;}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Serif+JP:wght@300;400&display=swap');
+:root {
+  --bg: #FAFAF8; --surface: #F5F3EF; --border: #E8E4DC;
+  --text-primary: #2C2A27; --text-secondary: #8C8880;
+  --accent: #7C6F5E; --link: #5A7A6A;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text-primary); font-family: 'Noto Serif JP', serif; font-weight: 300; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.site-header { padding: 2.5rem 2rem 1.5rem; border-bottom: 0.5px solid var(--border); text-align: center; }
+.site-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem,3vw,2rem); font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; }
+.site-subtitle { font-size: 0.7rem; letter-spacing: 0.15em; color: var(--text-secondary); margin-top: 0.4rem; text-transform: uppercase; }
+main { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+.section-label { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-secondary); text-transform: uppercase; margin: 2.5rem 0 1.2rem; padding-bottom: 0.5rem; border-bottom: 0.5px solid var(--border); }
+.article-list { display: flex; flex-direction: column; }
+.article-item { display: flex; align-items: baseline; gap: 1.5rem; padding: 1rem 0; border-bottom: 0.5px solid var(--border); }
+.article-num { font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; color: var(--text-secondary); min-width: 1.5rem; }
+.article-link { font-size: 0.9rem; font-weight: 300; color: var(--text-primary); }
+.article-link:hover { color: var(--link); text-decoration: none; }
+.portal-banner { margin: 2rem 0; padding: 1.5rem 2rem; background: var(--surface); border: 0.5px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.portal-banner-label { font-size: 0.6rem; letter-spacing: 0.2em; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 0.4rem; }
+.portal-banner-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; }
+.portal-banner-link { font-size: 0.75rem; letter-spacing: 0.15em; color: var(--accent); white-space: nowrap; text-transform: uppercase; }
+.site-footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 0.5px solid var(--border); font-size: 0.7rem; color: var(--text-secondary); display: flex; justify-content: space-between; }
+.ad-slot { width: 100%; min-height: 90px; background: var(--surface); border: 0.5px dashed var(--border); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; color: var(--text-secondary); margin: 1.5rem 0; }
