@@ -1,22 +1,43 @@
+const ARTICLES = [
+  "【2026最新】韓国コスメブランド人気ランキング TOP20",
+  "rom&nd ジューシーラスティングティント 全色レビュー",
+  "COSRX スネイルムチン美容液の効果と使い方",
+  "LANEIGE リップスリーピングマスク 徹底比較",
+  "パーソナルカラー診断で選ぶ韓国コスメ完全ガイド",
+  "イエベ・ブルベ別おすすめファンデーション 2026",
+  "韓国スキンケア 朝のルーティン完全版",
+  "Qoo10メガ割で買うべき韓国コスメ まとめ",
+]
 export default function Home() {
   return (
-    <main style={{fontFamily:'sans-serif',maxWidth:480,margin:'0 auto',padding:'20px 16px'}}>
-      <p style={{fontSize:10,letterSpacing:4,color:'#C4B5AD',marginBottom:8}}>K BEAUTY PORTAL</p>
-      <h1 style={{fontSize:22,fontWeight:400,color:'#2C2420',fontStyle:'italic',marginBottom:20}}>
-        今週のランキング
-      </h1>
-      <a href="https://kcos-review-jp.vercel.app"
-        style={{display:'block',padding:'14px 16px',background:'#2C2420',color:'#fff',textDecoration:'none',marginBottom:10,fontSize:13}}>
-        韓国コスメランキング →
-      </a>
-      <a href="https://haircolor-lab.vercel.app"
-        style={{display:'block',padding:'14px 16px',border:'0.5px solid #2C2420',color:'#2C2420',textDecoration:'none',marginBottom:10,fontSize:13}}>
-        ヘアカラーLAB →
-      </a>
-      <a href="https://skincare-note-jp.vercel.app"
-        style={{display:'block',padding:'14px 16px',border:'0.5px solid #2C2420',color:'#2C2420',textDecoration:'none',fontSize:13}}>
-        スキンケアNOTE →
-      </a>
+    <main>
+      <header className="site-header">
+        <div className="site-title">Beauty Portal</div>
+        <div className="site-subtitle">K-Beauty · Skincare · Makeup</div>
+      </header>
+      <main>
+        <div className="portal-banner">
+          <div>
+            <div className="portal-banner-label">AI診断</div>
+            <div className="portal-banner-title">AIパーソナルカラー診断 × 韓国コスメ</div>
+          </div>
+          <a href="https://colorpass.vercel.app" target="_blank" className="portal-banner-link">診断する →</a>
+        </div>
+        <div className="section-label">K-Beauty · Top Articles</div>
+        <div className="article-list">
+          {ARTICLES.map((a, i) => (
+            <div key={i} className="article-item">
+              <span className="article-num">{String(i+1).padStart(2,'0')}</span>
+              <a href="#" className="article-link">{a}</a>
+            </div>
+          ))}
+        </div>
+        <div className="ad-slot">Advertisement</div>
+        <footer className="site-footer">
+          <span>© 2026 AOKAE LLC</span>
+          <a href="https://makeup-lab-jp.vercel.app" target="_blank" style={{color:'var(--text-secondary)'}}>Makeup Lab →</a>
+        </footer>
+      </main>
     </main>
-  );
+  )
 }
