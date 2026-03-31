@@ -1,3 +1,3 @@
 # beauty-portal-jp
 
-Updated: 2026-03-31
+Updated: 2026-04-01
