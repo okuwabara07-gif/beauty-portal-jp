@@ -1,5 +1,5 @@
 const ARTICLES = [
-  "【2026最新】韓国コスメブランド人気ランキング TOP20",
+  "韓国コスメブランド人気ランキング TOP20",
   "rom&nd ジューシーラスティングティント 全色レビュー",
   "COSRX スネイルムチン美容液の効果と使い方",
   "LANEIGE リップスリーピングマスク 徹底比較",
@@ -23,21 +23,13 @@ export default function Home() {
     <main>
       <header className="site-header">
         <div className="site-title">Beauty Portal</div>
-        <div className="site-subtitle">K-Beauty · Skincare · Makeup — Japan's #1 Korean Beauty Hub</div>
+        <div className="site-subtitle">K-Beauty · Skincare · Makeup</div>
       </header>
       <main>
-        <div className="portal-banner">
-          <div>
-            <div className="portal-banner-label">AI診断</div>
-            <div className="portal-banner-title">AIパーソナルカラー診断 × 韓国コスメ</div>
-          </div>
-          <a href="https://colorpass.vercel.app" target="_blank" className="portal-banner-link">診断する →</a>
-        </div>
-
-        <div className="section-label">K-Beauty Sites — 専門サイト一覧</div>
+        <div className="section-label">K-Beauty Sites</div>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(140px,1fr))',gap:'10px',margin:'0 0 2rem'}}>
           {K_SITES.map(s => (
-            <a key={s.name} href={s.url} target="_blank" style={{
+            <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer" style={{
               display:'block',padding:'1rem',
               background:'var(--surface)',
               border:'0.5px solid var(--border)',
@@ -51,12 +43,12 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="section-label">K-Beauty · Top Articles</div>
+        <div className="section-label">Top Articles</div>
         <div className="article-list">
           {ARTICLES.map((a, i) => (
             <div key={i} className="article-item">
               <span className="article-num">{String(i+1).padStart(2,'0')}</span>
-              <a href="#" className="article-link">{a}</a>
+              <span className="article-link">{a}</span>
             </div>
           ))}
         </div>
@@ -65,7 +57,6 @@ export default function Home() {
 
         <footer className="site-footer">
           <span>© 2026 AOKAE LLC</span>
-          <a href="https://haircolor-lab.vercel.app" target="_blank" style={{color:'var(--text-secondary)'}}>Hair Color Lab →</a>
         </footer>
       </main>
     </main>
