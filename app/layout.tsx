@@ -58,6 +58,7 @@ export const metadata: Metadata = { title: 'Beauty Portal', description: '韓国
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (<html lang="ja">
       <head>
+        <meta name="google-site-verification" content="8c64b1447c588760" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3460729726810386" crossOrigin="anonymous"></script>
       </head><script async src="https://www.googletagmanager.com/gtag/js?id=G-SVQXY5C3PW"></script><script dangerouslySetInnerHTML={{__html:`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SVQXY5C3PW');`}} /><body>{children}<CopaWidgetFloat />
 </body></html>)
