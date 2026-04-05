@@ -22,9 +22,9 @@ function CopaWidgetFloat() {
             'COLORPASSに登録すると<br>占いが1週間無料！<br><a href="https://colorpass-web.vercel.app" target="_blank">→ 登録する💜</a>',
             'あなたのこと応援してるよ✨<br><a href="https://colorpass-web.vercel.app/fortune" target="_blank">→ 今日を占う🔮</a>',
           ];
-          if (!window._cwIdx) window._cwIdx = 0;
+          if (!(window as any)._cwIdx) window._cwIdx = 0;
           const b = document.getElementById("cw-bubble");
-          if (b) { b.innerHTML = msgs[window._cwIdx++ % msgs.length]; b.style.display = "block"; clearTimeout(window._cwTimer); window._cwTimer = setTimeout(() => b.style.display = "none", 4500); }
+          if (b) { b.innerHTML = msgs[(window as any)._cwIdx++ % msgs.length]; b.style.display = "block"; clearTimeout((window as any)._cwTimer); (window as any)._cwTimer = setTimeout(() => b.style.display = "none", 4500); }
         }}>
           <defs>
             <radialGradient id="cw-g" cx="42%" cy="32%" r="68%"><stop offset="0%" stopColor="#e8d8ff"/><stop offset="45%" stopColor="#c8a8f0"/><stop offset="100%" stopColor="#7c58c8"/></radialGradient>
