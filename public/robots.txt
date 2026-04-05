@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://beauty-portal-jp.vercel.app/sitemap.xml
