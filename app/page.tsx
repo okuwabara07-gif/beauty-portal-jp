@@ -1,4 +1,4 @@
-import PartnerLinks from '@/components/PartnerLinks'
+import PartnerLinks from '../components/PartnerLinks'
 import { getAllPosts } from '@/lib/posts'
 
 export default function Home() {
