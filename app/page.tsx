@@ -1,3 +1,4 @@
+import PartnerLinks from '@/components/PartnerLinks'
 import { getAllPosts } from '@/lib/posts'
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
       <a href="/blog" style={{display:'inline-block',padding:'12px 24px',background:'#9333ea',color:'white',borderRadius:'12px',textDecoration:'none',fontWeight:700}}>
         記事一覧を見る →
       </a>
-    </main>
+    <PartnerLinks />
+</main>
   )
 }
