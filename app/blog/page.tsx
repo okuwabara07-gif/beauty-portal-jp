@@ -12,15 +12,11 @@ export default function BlogPage() {
         <div style={{display:'grid',gap:'1rem'}}>
           {posts.map((post: any) => (
             <Link key={post.slug} href={`/blog/${post.slug}`}
-              style={{display:'block',padding:'1.25rem',background:'white',borderRadius:'12px',border:'1px solid #e8d4ff',textDecoration:'none'}}>
-              {post.thumbnail && (
-                <img src={post.thumbnail} alt={post.title}
-                  style={{width:'100%',height:'200px',objectFit:'cover',borderRadius:'8px',marginBottom:'12px'}} />
-              )}
-              <p style={{fontSize:'0.7rem',color:'#9333ea',marginBottom:'4px'}}>{post.genre}</p>
-              <h2 style={{fontSize:'1rem',fontWeight:700,color:'#333',marginBottom:'6px'}}>{post.title}</h2>
-              <p style={{fontSize:'0.8rem',color:'#666',marginBottom:'6px'}}>{post.excerpt}</p>
-              <p style={{fontSize:'0.7rem',color:'#aaa'}}>{post.date}</p>
+              style={{display:'block',padding:'1rem',border:'1px solid #e5e7eb',borderRadius:'8px',textDecoration:'none',color:'inherit'}}>
+              <h2 style={{fontSize:'1rem',fontWeight:600,marginBottom:'0.5rem'}}>{post.title}</h2>
+              <p style={{fontSize:'0.875rem',color:'#6b7280'}}>
+                {post.date ? String(post.date).slice(0,10) : ''}
+              </p>
             </Link>
           ))}
         </div>
